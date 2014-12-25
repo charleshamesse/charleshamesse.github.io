@@ -46,7 +46,7 @@ MathJax.Hub.Config({
       <p><strong>Id&eacute;e g&eacute;n&eacute;rale</strong><br>
       D&eacute;velopper un circuit permettant d'allumer une premi&egravere LED et de l'&eacute;teindre &agrave; une certaine fr&eacute;quence. Quand cette premi&egrave;re LED est &eacute;teinte, une deuxi&egrave;me LED doit &ecirc;tre allum&eacute;e. Aussi, on doit pouvoir changer la fr&eacute;quence du circuit avec un potentiom&egrave;tre.<br><br>
       On peut r&eacute;aliser ceci avec un timer 555 (1 et 2) en mode astable, servant alors d'oscillateur dont la fr&eacute;quence est d&eacute;termin&eacute;e par deux r&eacute;sistances et une capacit&eacute;.<br><br>
-      Pour mesurer la fr&eacute;quence et le rapport cyclique avec pr&eacute;cision, on peut mettre un buzzer (3) en parall&egrave;le avec une LED. Celui-ci &eacute;mettra un son court &agrave; chaque alternance (le signal re&ccedil;u est en DC).
+      Pour mesurer la fr&eacute;quence et le rapport cyclique avec pr&eacute;cision, on peut filmer le circuit en fonctionnement et puis analyser la vid&eacute;o en slow-motion.
       </p>
       <div class="row">
       	<div class="col-md-4">
@@ -64,10 +64,6 @@ MathJax.Hub.Config({
            </div>
        </div>
        <div class="col-md-4">
-			<div class="innerContainer">
-            <strong>(3) Buzzer Arduino</strong>
-            <img class="img-responsive" src="img/buzzer.jpg">
-           </div>
        </div>
      </div>
      <p><strong>Fonctionnement du NE555 en mode astable</strong></p>
@@ -143,19 +139,125 @@ Donc, les temps haut et bas sont :
             $$f = \frac{1}{t_l + t_h} = \frac{1}{ln(2).(R_1 + 2R_2).C}$$</div></div>
    
       </p>
-      
+ En fixant \(R_1 = 1.8k \Omega\), \(C = 100 \mu F\) en prenant pour \(R_2\) un potentiom&egrave;tre allant jusque \(10 k\Omega\), on obtient :<br><br>
+<table class="table table-striped">
+	<tr>
+    	<th>R1</th>
+        <th>R2</th>
+    	<th>C</th>
+    	<th>Fr&eacute;quence</th>
+    	<th>P&eacute;riode</th>
+    	<th>Temps haut</th>
+        <th>Temps bas</th>
+    </tr>
+<tr>
+	<td>1.8k\(\Omega\)</td>
+    <td>1k\(\Omega\)</td>
+    <td>100uF</td>
+    <td>3.7966Hz</td>
+    <td>0.2634s</td>
+    <td>0.1941s</td>
+    <td>0.0693s</td>
+</tr>
+<tr>
+	<td>1.8k\(\Omega\)</td>
+    <td>3k\(\Omega\)</td>
+    <td>100uF</td>
+    <td>1.8496Hz</td>
+    <td>0.5407s</td>
+    <td>0.3327s</td>
+    <td>0.2079s</td>
+</tr>
+<tr>
+	<td>1.8k\(\Omega\)</td>
+    <td>5k\(\Omega\)</td>
+    <td>100uF</td>
+    <td>1.2226Hz</td>
+    <td>0.8179s</td>
+    <td>0.4713s</td>
+    <td>0.3466s</td>
+</tr>
+<tr>
+	<td>1.8k\(\Omega\)</td>
+    <td>8k\(\Omega\)</td>
+    <td>100uF</td>
+    <td>0.8105Hz</td>
+    <td>1.2338s</td>
+    <td>0.6793s</td>
+    <td>0.5545s</td>
+</tr>
+<tr>
+	<td>1.8k\(\Omega\)</td>
+    <td>10k\(\Omega\)</td>
+    <td>100uF</td>
+    <td>0.6618Hz</td>
+    <td>1.5111s</td>
+    <td>0.8179s</td>
+    <td>0.6931s</td>
+</tr>
+</table>
+Ces valeurs sont donn&eacute;s par le script matlab suivant :<br>
+
+<pre>R1 = 1800;
+C = 0.0001;
+R2 = 10000;
+f = 1 / (log(2)*(R1 + 2*R2)*C)
+t = 1/f
+th = log(2)*(R1 + R2)*C
+tl = log(2)*R2*C</pre> 
 		<hr>
 
       <h3>Approche pratique</h3>
       <p><strong>Circuit branch&eacute;</strong></p>
       <div class="row">
-        <div class="col-md-12">Ici photo ici</div>
+        <div class="col-md-4">
+        <div class="innerContainer">
+            <img class="img-responsive" src="img/circuitreal.jpg">
+		</div>
+</div> <div class="col-md-8">
+        La seule partie manquante est l'alimentation : j'ai utilis&eacute; une simple pile 4.5V.
+</div>
       </div>
       
-       <p><strong>Mesures</strong></p>
-      
-      <p><strong>Observations</strong></p>
-
+      <strong>Mesures et observations</strong></p>
+       <div class="row">
+        <div class="col-md-6">
+        <div class="innerContainer">
+      <video class="img-responsive" controls>
+  <source src="video/NE555.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="col-md-6">
+&Agrave; d&eacute;faut d'avoir un oscilloscope &agrave; la maison, j'ai film&eacute; en 30 images par seconde le circuit en fonctionnement avec divers valeurs de R1.<br>Comme cit&eacute; dans la vid&eacute;o, ces valeurs sont :<br><br>
+- R1 = 8.04 k \(\Omega\)<br>
+- R1 = 5.00 k \(\Omega\)<br>
+- R1 = 3.00 k \(\Omega\).
+<br><br>
+Elles ont &eacute;t&eacute; mesur&eacute;es avec le multim&egrave;tre au bornes du potentiom&egrave;tre.
+</div>
+</div>
+<table class="table table-striped">
+	<tr>
+    	<th>R1</th>
+    	<th>P&eacute;riode mesur&eacute;e</th>
+    	<th>P&eacute;riode attendue</th>
+    </tr>
+<tr>
+	<td>8.04k \(\Omega\)</td>
+    <td>1.087s</td>
+    <td>1.233s</td>
+</tr><tr>
+	<td>5.00k\(\Omega\)</td>
+    <td>0.873s</td>
+    <td>0.818s</td>
+</tr><tr>
+	<td>3.00k\(\Omega\)</td>
+    <td>0.713s</td>
+    <td>0.541s</td>
+</tr>
+</table>
       <hr>
 
 <h3>Conclusion</h3>
@@ -164,7 +266,3 @@ Donc, les temps haut et bas sont :
     </div> <!-- /container -->
   </body>
 </html>
-
-http://www.geek.com/wp-content/uploads/2011/06/555timer_stool_04.jpg
-http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/NE555_Symbol.svg/836px-NE555_Symbol.svg.png
- http://tronixstuff.files.wordpress.com/2010/07/tdk_ps1240ss.jpg
