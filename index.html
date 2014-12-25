@@ -72,13 +72,20 @@ MathJax.Hub.Config({
      </div>
      <p><strong>Fonctionnement du NE555 en mode astable</strong><br> 
      <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
 			<div class="innerContainer">
-            <img class="img-responsive" src="img/ne555astable.png">
+            <img class="img-responsive" src="img/ne555astable.png">Diagramme en blocs d'un montage astable de NE555. 
 </div>
        </div>
-       <div class="col-md-8">
-            ici??<br><br><br><br><br>OKKK
+       <div class="col-md-6">
+            Les trois r&eacute;sistances R sont identiques. On remarque directement les tensions suivantes :<br>
+            \(V_B = \frac{2}{3}V_+\)<br>
+            \(V_C = \frac{1}{3}V_+\)<br><br>
+            La tension en A repr&eacute;sente la tension sur la capacit&eacute;. On remarque que les deux aops sont plac&eacute;s de mani&egrave;re &agrave ce que :<br>
+            1. Si \(V_A > V_B\), alors \(V_D = V_+\), sinon \(V_D = 0V\)<br>
+            2. Si \(V_A > V_C\), alors \(V_E = V_+\), sinon \(V_E = 0V\)<br><br>
+            Ensuite, au niveau de la bascule RS:<br>
+            1. Si \(V_D = V_+\), c'est un reset : \(Q = 0V, \bar{Q} = V_+\)
        </div>
        </div></p>
      
