@@ -230,7 +230,7 @@ Your browser does not support the video tag.
 </div>
 </div>
 <div class="col-md-6">
-&Agrave; d&eacute;faut d'avoir un oscilloscope &agrave; la maison, j'ai film&eacute; en 30 images par seconde le circuit en fonctionnement avec divers valeurs de R1.<br>Comme cit&eacute; dans la vid&eacute;o, ces valeurs sont :<br><br>
+&Agrave; d&eacute;faut d'avoir un oscilloscope &agrave; la maison, j'ai film&eacute; en 30 images par seconde le circuit en fonctionnement avec diverses valeurs de R1.<br>Comme cit&eacute; dans la vid&eacute;o, ces valeurs sont :<br><br>
 - R1 = 8.04 k \(\Omega\)<br>
 - R1 = 5.00 k \(\Omega\)<br>
 - R1 = 3.00 k \(\Omega\).
@@ -240,25 +240,38 @@ Elles ont &eacute;t&eacute; mesur&eacute;es avec le multim&egrave;tre au bornes 
 </div>
 <table class="table table-striped">
 	<tr>
+    	<th>#</th>
     	<th>R1</th>
     	<th>P&eacute;riode mesur&eacute;e</th>
     	<th>P&eacute;riode attendue</th>
     </tr>
 <tr>
-	<td>8.04k \(\Omega\)</td>
+	<td>1</td>
+    <td>8.04k \(\Omega\)</td>
     <td>1.087s</td>
     <td>1.233s</td>
 </tr><tr>
+	<td>2</td>
 	<td>5.00k\(\Omega\)</td>
     <td>0.873s</td>
     <td>0.818s</td>
 </tr><tr>
+	<td>3</td>
 	<td>3.00k\(\Omega\)</td>
     <td>0.713s</td>
     <td>0.541s</td>
 </tr>
+</tr><tr>
+	<td>4</td>
+	<td>1.03k\(\Omega\)</td>
+    <td>0.517s</td>
+    <td>0.263s</td>
+</tr>
 </table>
+Pour avoir plus de pr&eacute;cision au niveau du temps, j'ai analys&eacute; le temps par dix p&eacute;riodes sur la vid&eacute;o &eacute;chantillonn&eacute;e en 30 images par seconde (calcul du type \(10T = 12s + 11/30 - (0s + 23/30)\)).<br><br>
+On remarque que pour l'essai #1, la p&eacute;riode mesur&eacute;e est plus courte, tandis que pour les essais #2, #3 et #4, elle est plus longue. Pour #3 et #4, cette p&eacute;riode mesur&eacute;e est m&ecirc;me beaucoup trop longue.
       <hr>
+   
 
 <h3>Conclusion</h3>
 <p>Ici</p>
