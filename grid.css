@@ -29,3 +29,6 @@ hr {
   	border: 1px solid rgba(150,150,150,.08);
   	border-radius:4px;
 }
+.vertical-center {
+	vertical-align:middle;
+}
