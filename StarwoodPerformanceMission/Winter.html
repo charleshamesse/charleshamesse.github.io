@@ -1,0 +1,205 @@
+<html>
+  <head>
+   <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+     google.load('visualization', '1', {'packages': ['geochart']});
+     google.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+['City',   'Temperature'],['Albania Tirana',  6.9], 
+['Algeria Algiers',  11.7], 
+['Algeria Oran',  11.3], 
+['Austria Dornbirn',  1.4], 
+['Austria Fuschlsee',  1.4], 
+['Austria Salzburg',  1.4], 
+['Austria Vienna',  1.4], 
+['Azerbaijan Baku',  5.3], 
+['Bahrain Manama',  18.1], 
+['Belgium Brussels',  3.7], 
+['Bulgaria Sofia',  0.4], 
+['Croatia Podstrana-Split',  9.9], 
+['Croatia Srebreno',  9.9], 
+['Croatia Zagreb',  2.6], 
+['Cyprus Limassol',  12.3], 
+['Czech Republic Prague',  1.7], 
+['Djibouti Djibouti',  25.0], 
+['Egypt Alexandria',  14.3], 
+['Egypt Cairo',  14.5], 
+['Egypt Dahab',  16.4], 
+['Egypt El Gouna',  16.2], 
+['Egypt Hurghada',  18.8], 
+['Egypt Luxor',  17.3], 
+['Egypt Sharm El Sheikh',  16.3], 
+['Egypt Soma Bay',  16.5], 
+['Ethiopia Addis Ababa',  15.8], 
+['Finland Helsinki',  -3.9], 
+['France Nice',  9.7], 
+['France Paris',  5.3], 
+['France Roissy',  4.5], 
+['Gabon Libreville',  26.7], 
+['Gabon Port-Gentil',  26.9], 
+['Gambia Brufut Heights',  23.7], 
+['Georgia Batumi',  7.8], 
+['Georgia Tbilisi',  2.4], 
+['Germany Berlin',  1.3], 
+['Germany Dresden',  0.8], 
+['Germany Dusseldorf',  3.3], 
+['Germany Essen',  3.0], 
+['Germany Frankfurt',  2.1], 
+['Germany Frankfurt am Main',  2.1], 
+['Germany Hamburg',  1.9], 
+['Germany Hannover',  1.8], 
+['Germany Leipzig',  1.1], 
+['Germany Munich',  -1.2], 
+['Germany Nuremberg',  0.4], 
+['Germany Stuttgart',  0.5], 
+['Germany Weimar',  0.2], 
+['Greece Athens',  10.7], 
+['Greece Crete',  12.6], 
+['Greece Mykonos',  12.0], 
+['Greece Pylos',  6.0], 
+['Greece Rhodes',  12.5], 
+['Greece Santorini',  10.7], 
+['Hungary Kecskemet',  1.8], 
+['Iraq Dohuk',  8.7], 
+['Ireland Athlone',  6.2], 
+['Ireland Dublin',  5.3], 
+['Israel Tel Aviv',  14.2], 
+['Italy Bolzano',  2.0], 
+['Italy Catania',  11.6], 
+['Italy Como',  3.7], 
+['Italy Florence',  6.7], 
+['Italy Milan',  2.5], 
+['Italy Padova',  3.3], 
+['Italy Porto Cervo',  10.4], 
+['Italy Portopiccolo',  6.1], 
+['Italy Rome',  7.9], 
+['Italy Venice',  3.3], 
+['Jordan Amman',  8.9], 
+['Kuwait Kuwait',  18.1], 
+['Lebanon Beirut',  14.9], 
+['Lebanon Broumana',  14.9], 
+['Libya Tripoli',  14.1], 
+['Malta St. Julians',  12.8], 
+['Mauritius Le Morne',  27.6], 
+['Mauritius Pointe Aux Piments',  27.6], 
+['Mauritius Turtle Bay',  27.6], 
+['Monacco Monte Carlo',  10.6], 
+['Morocco Casablanca',  13.4], 
+['Morocco Marrakech',  12.9], 
+['Netherlands Amsterdam',  3.6], 
+['Netherlands The Hague',  3.8], 
+['Nigeria Abuja',  27.9], 
+['Nigeria Akwa Ibom',  27.0], 
+['Nigeria Lagos (Nigeria)',  27.7], 
+['Nigeria Port Harcourt',  27.0], 
+['Poland Krakow',  -1.3], 
+['Poland Poznan',  -0.6], 
+['Poland Sopot',  -0.3], 
+['Poland Warsaw',  -1.9], 
+['Portugal Albufeira',  12.7], 
+['Portugal Evora',  10.3], 
+['Portugal Lisbon',  12.1], 
+['Portugal Porto',  9.0], 
+['Qatar Doha',  18.3], 
+['Romania Bucharest',  0.0], 
+['Russia Kaluga',  -8.5], 
+['Russia Moscow',  -6.1], 
+['Russia St. Petersburg',  -5.3], 
+['Russia Ufa',  -12.2], 
+['Saudi Arabia Al Khobar',  16.7], 
+['Saudi Arabia Dammam',  16.7], 
+['Saudi Arabia Jeddah',  24.5], 
+['Saudi Arabia Makkah',  25.2], 
+['Saudi Arabia Medina',  18.1], 
+['Saudi Arabia Riyadh',  18.7], 
+['Saudi Arabia Taif',  15.9], 
+['Serbia Belgrade',  2.6], 
+['Seychelles Mahé',  27.1], 
+['Slovakia Bratislava',  0.8], 
+['Slovenia Ljubljana',  0.3], 
+['South Africa Cape Town',  20.6], 
+['South Africa Pretoria',  22.8], 
+['Spain Barcelona',  9.0], 
+['Spain Elciego-Alava',  6.6], 
+['Spain Fuerteventura Island',  18.2], 
+['Spain Gran Canary Island',  18.4], 
+['Spain Madrid',  7.0], 
+['Spain Palma de Mallorca',  12.3], 
+['Spain San Sebastian',  9.2], 
+['Spain Sevilla',  11.8], 
+['Spain Tarragona',  9.5], 
+['Spain Tenerife',  18.6], 
+['Spain Valencia',  12.2], 
+['Sweden Stockholm',  -2.3], 
+['Switzerland Davos',  -4.1], 
+['Switzerland Geneve',  2.2], 
+['Switzerland Verbier',  0.7], 
+['Switzerland Zurich',  -0.1], 
+['Syria Aleppo',  6.3], 
+['Syria Damascus',  6.7], 
+['Syria Sednaya',  7.4], 
+['Tajikistan Dushanbe',  5.4], 
+['Tunisia Tunis',  12.0], 
+['Turkey Adana',  10.0], 
+['Turkey Ankara',  -0.8], 
+['Turkey Bodrum',  12.2], 
+['Turkey Bursa',  6.4], 
+['Turkey Cesme',  9.9], 
+['Turkey Istanbul',  6.6], 
+['Turkey Samsun',  7.6], 
+['UAE Abu Dhabi',  18.8], 
+['UAE Ajman',  20.3], 
+['UAE Bur Dubai',  20.3], 
+['UAE Dubai',  20.3], 
+['UAE Fujairah',  18.8], 
+['Uganda Kampala',  23.2], 
+['Ukraine Zaporozhye',  -2.6], 
+['United Kingdom Edinburgh',  3.9], 
+['United Kingdom Liverpool',  5.0], 
+['United Kingdom London',  5.2], 
+['United Kingdom Turnberry',  4.5], 
+]);
+
+      var options = {
+      	region: 'auto',
+      	sizeAxis: { minValue: 0, maxValue: 100 },
+      	displayMode: 'text',
+        displayMode: 'markers',
+        colorAxis: {colors: ['#0500ff', '#0044ff', '#00e4ff', '#FFc800', '#FF6400', '#FF0000']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    circle { stroke-width: 0px; }
+    body { 
+    	font-family: 'Raleway', sans-serif;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    }
+    h1 {
+    	font-weight: normal;
+    }
+    .head {
+    position: absolute;
+    width:100%;
+    top:0;
+    z-index:10;
+    }
+    </style>
+  </head>
+  <body>
+  	<div align="center">
+  	<div class="head" align="center"><h1>Temperature in 
+Winter</h1></div>
+    <div id="chart_div" style="width: 100%; height: 100%;"></div>
+  	</div>
+  </body>
+</html>

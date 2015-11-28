@@ -1,0 +1,205 @@
+<html>
+  <head>
+   <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+     google.load('visualization', '1', {'packages': ['geochart']});
+     google.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+['City',   'Temperature'],['Albania Tirana',  16.1], 
+['Algeria Algiers',  19.3], 
+['Algeria Oran',  18.7], 
+['Austria Dornbirn',  10.5], 
+['Austria Fuschlsee',  10.5], 
+['Austria Salzburg',  10.5], 
+['Austria Vienna',  10.5], 
+['Azerbaijan Baku',  16.8], 
+['Bahrain Manama',  28.8], 
+['Belgium Brussels',  10.8], 
+['Bulgaria Sofia',  11.0], 
+['Croatia Podstrana-Split',  17.8], 
+['Croatia Srebreno',  17.8], 
+['Croatia Zagreb',  11.9], 
+['Cyprus Limassol',  21.3], 
+['Czech Republic Prague',  10.4], 
+['Djibouti Djibouti',  29.5], 
+['Egypt Alexandria',  22.2], 
+['Egypt Cairo',  22.7], 
+['Egypt Dahab',  24.9], 
+['Egypt El Gouna',  24.5], 
+['Egypt Hurghada',  26.0], 
+['Egypt Luxor',  28.3], 
+['Egypt Sharm El Sheikh',  24.5], 
+['Egypt Soma Bay',  24.7], 
+['Ethiopia Addis Ababa',  16.3], 
+['Finland Helsinki',  6.2], 
+['France Nice',  17.1], 
+['France Paris',  12.7], 
+['France Roissy',  12.1], 
+['Gabon Libreville',  25.7], 
+['Gabon Port-Gentil',  25.8], 
+['Gambia Brufut Heights',  26.3], 
+['Georgia Batumi',  16.0], 
+['Georgia Tbilisi',  13.7], 
+['Germany Berlin',  9.8], 
+['Germany Dresden',  9.8], 
+['Germany Dusseldorf',  11.2], 
+['Germany Essen',  10.4], 
+['Germany Frankfurt',  10.5], 
+['Germany Frankfurt am Main',  10.5], 
+['Germany Hamburg',  9.7], 
+['Germany Hannover',  10.0], 
+['Germany Leipzig',  9.7], 
+['Germany Munich',  8.1], 
+['Germany Nuremberg',  9.3], 
+['Germany Stuttgart',  9.1], 
+['Germany Weimar',  8.8], 
+['Greece Athens',  19.7], 
+['Greece Crete',  20.5], 
+['Greece Mykonos',  20.0], 
+['Greece Pylos',  14.5], 
+['Greece Rhodes',  20.6], 
+['Greece Santorini',  19.7], 
+['Hungary Kecskemet',  11.4], 
+['Iraq Dohuk',  21.7], 
+['Ireland Athlone',  11.3], 
+['Ireland Dublin',  10.2], 
+['Israel Tel Aviv',  22.7], 
+['Italy Bolzano',  11.8], 
+['Italy Catania',  20.6], 
+['Italy Como',  13.3], 
+['Italy Florence',  15.5], 
+['Italy Milan',  13.0], 
+['Italy Padova',  13.5], 
+['Italy Porto Cervo',  18.2], 
+['Italy Portopiccolo',  14.9], 
+['Italy Rome',  16.7], 
+['Italy Venice',  13.3], 
+['Jordan Amman',  19.7], 
+['Kuwait Kuwait',  28.8], 
+['Lebanon Beirut',  23.6], 
+['Lebanon Broumana',  23.6], 
+['Libya Tripoli',  22.5], 
+['Malta St. Julians',  20.6], 
+['Mauritius Le Morne',  24.7], 
+['Mauritius Pointe Aux Piments',  24.7], 
+['Mauritius Turtle Bay',  24.7], 
+['Monacco Monte Carlo',  17.8], 
+['Morocco Casablanca',  19.2], 
+['Morocco Marrakech',  20.9], 
+['Netherlands Amsterdam',  10.9], 
+['Netherlands The Hague',  11.2], 
+['Nigeria Abuja',  25.2], 
+['Nigeria Akwa Ibom',  26.0], 
+['Nigeria Lagos (Nigeria)',  26.3], 
+['Nigeria Port Harcourt',  26.0], 
+['Poland Krakow',  8.8], 
+['Poland Poznan',  9.9], 
+['Poland Sopot',  8.7], 
+['Poland Warsaw',  8.4], 
+['Portugal Albufeira',  19.1], 
+['Portugal Evora',  17.7], 
+['Portugal Lisbon',  18.3], 
+['Portugal Porto',  15.2], 
+['Qatar Doha',  28.7], 
+['Romania Bucharest',  11.5], 
+['Russia Kaluga',  4.8], 
+['Russia Moscow',  5.2], 
+['Russia St. Petersburg',  5.5], 
+['Russia Ufa',  3.2], 
+['Saudi Arabia Al Khobar',  28.1], 
+['Saudi Arabia Dammam',  28.1], 
+['Saudi Arabia Jeddah',  29.2], 
+['Saudi Arabia Makkah',  32.5], 
+['Saudi Arabia Medina',  28.1], 
+['Saudi Arabia Riyadh',  29.0], 
+['Saudi Arabia Taif',  22.9], 
+['Serbia Belgrade',  13.0], 
+['Seychelles Mahé',  26.9], 
+['Slovakia Bratislava',  10.5], 
+['Slovenia Ljubljana',  10.7], 
+['South Africa Cape Town',  16.1], 
+['South Africa Pretoria',  20.3], 
+['Spain Barcelona',  16.3], 
+['Spain Elciego-Alava',  14.5], 
+['Spain Fuerteventura Island',  22.7], 
+['Spain Gran Canary Island',  22.9], 
+['Spain Madrid',  14.9], 
+['Spain Palma de Mallorca',  19.6], 
+['Spain San Sebastian',  15.3], 
+['Spain Sevilla',  20.1], 
+['Spain Tarragona',  17.2], 
+['Spain Tenerife',  23.2], 
+['Spain Valencia',  19.0], 
+['Sweden Stockholm',  7.4], 
+['Switzerland Davos',  4.9], 
+['Switzerland Geneve',  10.7], 
+['Switzerland Verbier',  9.3], 
+['Switzerland Zurich',  8.7], 
+['Syria Aleppo',  19.2], 
+['Syria Damascus',  17.5], 
+['Syria Sednaya',  17.9], 
+['Tajikistan Dushanbe',  15.5], 
+['Tunisia Tunis',  20.2], 
+['Turkey Adana',  21.0], 
+['Turkey Ankara',  10.7], 
+['Turkey Bodrum',  21.0], 
+['Turkey Bursa',  15.7], 
+['Turkey Cesme',  19.4], 
+['Turkey Istanbul',  16.0], 
+['Turkey Samsun',  16.0], 
+['UAE Abu Dhabi',  27.7], 
+['UAE Ajman',  29.4], 
+['UAE Bur Dubai',  29.4], 
+['UAE Dubai',  29.4], 
+['UAE Fujairah',  27.0], 
+['Uganda Kampala',  22.5], 
+['Ukraine Zaporozhye',  9.3], 
+['United Kingdom Edinburgh',  9.1], 
+['United Kingdom Liverpool',  10.8], 
+['United Kingdom London',  11.5], 
+['United Kingdom Turnberry',  9.5], 
+]);
+
+      var options = {
+      	region: 'auto',
+      	sizeAxis: { minValue: 0, maxValue: 100 },
+      	displayMode: 'text',
+        displayMode: 'markers',
+        colorAxis: {colors: ['#0500ff', '#0044ff', '#00e4ff', '#FFc800', '#FF6400', '#FF0000']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    circle { stroke-width: 0px; }
+    body { 
+    	font-family: 'Raleway', sans-serif;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    }
+    h1 {
+    	font-weight: normal;
+    }
+    .head {
+    position: absolute;
+    width:100%;
+    top:0;
+    z-index:10;
+    }
+    </style>
+  </head>
+  <body>
+  	<div align="center">
+  	<div class="head" align="center"><h1>Temperature in 
+Autumn</h1></div>
+    <div id="chart_div" style="width: 100%; height: 100%;"></div>
+  	</div>
+  </body>
+</html>
