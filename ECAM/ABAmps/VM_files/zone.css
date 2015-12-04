@@ -1,0 +1,116 @@
+#ZoneBigIm, #ZonesLittleImAndQueryResp {
+  display: inline-block;
+}
+
+#ZoneBigIm {
+  width: 59.2%;
+  vertical-align:top;
+}
+
+#ZoneConsole {
+  width: 3.6%;
+}
+
+#ZonesLittleImAndQueryResp {
+  width: 36%;
+}
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height:100%;
+  vertical-align:top;
+  padding: 0;
+}
+
+.wrapper video {
+  position:absolute;
+  width: 100%;
+  opacity:1;
+  vertical-align:top;
+  left:0;
+}
+
+.videomain {
+  z-index:21;
+  visibility:visible;
+}
+
+.videob {
+  z-index:20;
+  visibility:hidden;
+}
+
+.imgvm {
+  position:absolute;
+  width: 100%;
+  height:100%;
+  z-index:0;
+  vertical-align:top;
+  left:0;
+}
+
+.bubble
+{
+  position:relative;
+  float:left;     /* because the image at left */
+}
+.bubbleborder
+{
+  position:absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+  
+.bubbletextori
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:200px;
+  height:170px;
+  padding:80px 16px 16px 16px;
+  text-align:center;
+
+    z-index:25;
+}
+.bubbletext0
+{
+  position: absolute;
+  font-family:"comic sans ms";
+  text-align:center;
+}
+.bubbletext1
+{
+  position: absolute;
+  font-family:"comic sans ms";
+  text-align:center;
+}
+
+.rect {
+	background:  none;
+  position: absolute;
+	box-sizing:border-box;     /* for border inside area (rather than outsise) gng 130908 */
+	-moz-box-sizing:border-box; /* Firefox */
+	cursor:pointer;
+	z-index:50;
+}
+.rect_next {
+	background:  rgba(232, 232, 255, .2);
+	border: 1px solid rgba(255, 0, 0, .15); /* rect Next: red */
+}
+
+.rect_previous {
+	background:  rgba(232, 232, 255, .2);
+	border: 1px solid rgba(0, 0, 255, .15); /* rect Previous: blue */
+}
+
+.rect_std{
+	background:  rgba(232, 232, 255, .2);
+	border: 1px solid rgba(255, 255, 255, 0.4); /* rect Standard: white */
+}

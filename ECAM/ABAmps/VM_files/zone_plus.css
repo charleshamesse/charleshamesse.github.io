@@ -1,0 +1,4 @@
+/* not for IE where yet issue in version IE 11 */
+.rect:hover {
+  background:transparent
+}

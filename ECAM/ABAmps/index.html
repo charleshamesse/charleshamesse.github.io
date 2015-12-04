@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://videomodel.ecam.be/index.php?name=3be13_npnpolar&level=3be13&lang=fr -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+  <!-- Main available bookmarks :  menu1, title -->
+
+
+<title>Amplificateur de classe AB à transistors bipolaires</title>
+
+<style>
+	input{z-index:100;}
+</style>
+	
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+	
+<script type="text/javascript">
+  var browserName = "chrome";
+  var fullbrowserName = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36";
+	img0_W = 580; // default Width for img0
+	img0_H = 390;
+	img1_W = 350; // default Width for img1
+	img1_H = 235;
+	swapCoeff = 0.539369646387;
+	var Vm = new Array();
+	var type = new Array();
+
+	
+	type[0] = 'sm';
+	Vm[0] = {
+		"nLr":  [5, 5] ,
+		"LrContMax":  1 ,
+		"LrCurvesMax":  NaN ,
+		"nVm": 0,
+		"nCont": 25,
+		"nPtCurves": 0,
+		"ImId": "0000",
+		"LrId": [0],
+		"Name": "PolarisationtransistorNPN__Af_25_0000.jpg",
+		"Ext": ".mp4",
+		"Size": [1024, 688],
+		"PlayUse": 0,
+		"VidBexist": 0,
+		"VidBrunning": 0,
+		"loopFirstTime": 0,
+		"loopLastTime": 9};
+	Vm[0].LrId = new Array(Vm[0].nLr.length);
+	for (var k=0; k<Vm[0].LrId.length; k++){
+		Vm[0].LrId[k] = 0;
+	}
+
+	type[1] = 'sm';
+	Vm[1] = {
+		"nLr":  [5, 5] ,
+		"LrContMax":  1 ,
+		"LrCurvesMax":  NaN ,
+		"nVm": 0,
+		"nCont": 25,
+		"nPtCurves": 0,
+		"ImId": "0000",
+		"LrId": [0],
+		"Name": "PolarisationtransistorNPN1__Af_25_0000.jpg",
+		"Ext": ".mp4",
+		"Size": [1024, 688],
+		"PlayUse": 0,
+		"VidBexist": 0,
+		"VidBrunning": 0,
+		"loopFirstTime": 0,
+		"loopLastTime": 9};
+	Vm[1].LrId = new Array(Vm[1].nLr.length);
+	for (var k=0; k<Vm[1].LrId.length; k++){
+		Vm[1].LrId[k] = 0;
+	}
+</script>
+  
+
+		<script type="text/javascript" src="./VM_files/MathJax.js">
+		</script> 
+    <link rel="stylesheet" type="text/css" href="./VM_files/style3be.css">
+	<link rel="stylesheet" type="text/css" href="./VM_files/text.css">
+<link rel="stylesheet" media="screen" type="text/css" href="./VM_files/zone.css">
+<link rel="stylesheet" media="screen" type="text/css" href="./VM_files/zone_plus.css">
+<!-- pour superfish -->
+<script src="./VM_files/jquery-1.10.2.min.js"></script>
+<script src="./VM_files/hoverIntent.js"></script>
+<script src="./VM_files/superfish.js"></script>
+<link rel="stylesheet" href="http://videomodel.ecam.be/css/superfish.css" media="screen">
+  
+<!-- pour tooltips 131118 -->
+<link rel="stylesheet" href="http://videomodel.ecam.be/js/jquery-ui.css">
+<script src="./VM_files/jquery-ui.js"></script>
+
+<script type="text/javascript" src="./VM_files/questions.js"></script>
+<script type="text/javascript" src="./VM_files/viewvm.js"></script>
+<script type="text/javascript" src="./VM_files/bubbles.js"></script>
+<script type="text/javascript" src="./VM_files/State.js"></script>
+
+<script> // pour tooltips 131118
+	$(function() {
+		$( document ).tooltip();
+	});
+</script>
+
+<script type="text/javascript">
+	var ctx;
+	var B_i = 0;
+	var B_ii = 0;
+	var B_pointPos = new Array();
+	var B_list = new Array();
+	var B_pos = new Array();
+	var B_zone = new Array();
+	var B_im = new Array();
+	var B_num = new Array();
+	var B_color = new Array();
+	var B_thickness = new Array();
+	var B_length = 0;
+	var B_nstep = 0;
+	var B_istep = 0;
+
+	var nBubbles = 0;
+
+	var k = 0;
+	var draw = true;
+	var timeoutID = new Array();
+	var Run = [0, 0];
+	var TimeOut = [100, 100];
+	var DispToDo = [0, 0]; // will take 1 if refresh display yet needed for iVm 0 or 1  121204
+	var Big0Little1 = true;
+  </script>
+  <style type="text/css">
+	lang{ float:right;}
+	</style>
+<script>
+	(function($){ //create closure so we can safely use $ as alias for jQuery
+
+			$(document).ready(function(){
+
+				// initialise plugin
+				var example = $('#example').superfish({
+					//add options here if required
+				});
+
+			});
+
+		})(jQuery);
+</script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css"></style></head>
+<body dir="LTR" onload="" style="color: rgb(0, 0, 0); font-size: 1em;" lang="fr-CH"><div id="MathJax_Message" style="display: none;"></div>
+
+ 
+
+<table cellspacing="0" width="980px">
+	<tbody>
+		<tr>
+			<td>
+				<div id="menu1" align="left" style="float:left;z-index:1">
+					<ul class="sf-menu sf-js-enabled sf-arrows" id="example">
+					
+					<li><a href="http://videomodel.ecam.be/index.php?name=home&level=3be13&lang=fr">Accueil</a></li>
+                 	<li><a href="http://videomodel.ecam.be/index.php?name=3be13_npnpolar&level=3be13&lang=fr#" class="sf-with-ul">Composants</a></li>
+					<li><a href="http://videomodel.ecam.be/index.php?name=3be13_npnpolar&level=3be13&lang=fr#" class="sf-with-ul">Circuits</a></li>
+			 </ul>
+				</div>
+					 
+				 <div id="lang" align="right" style="float:rigth">
+					<button type="button" name="button1" title="nederlands" onclick="window.location.href=&#39;index.php?name=3be13_npnpolar&amp;level=3be13&amp;lang=nl&#39;">
+						nl</button>
+							
+					<button type="button" name="button1" title="english" onclick="window.location.href=&#39;index.php?name=3be13_npnpolar&amp;level=3be13&amp;lang=en&#39;">
+						en</button>
+
+					<button type="button" name="button1" title="français" onclick="window.location.href=&#39;index.php?name=3be13_npnpolar&amp;level=3be13&amp;lang=fr&#39;">
+						fr</button>
+				 </div>
+	
+				<!-- Title (130411 style modifications for body, title, author and translator: uses /css/text.css)-->
+				<div id="title" style="margin-bottom: 0mm;" align="CENTER">
+					<h1> <br>
+      Amplificateur de classe AB &agrave; transistors bipolaires
+   </h1>
+						<div class="author"><i>Charles Hamesse<br>David Nicaise<br></i></div>				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="./VM_files/ligne.png" border="0" align="center" width="980"> 
+			</td>
+		</tr>
+		 <!-- Introduction -->
+		<tr>
+			<td id="intro" colspan="3" style="padding-left:7px;" width="980px">
+				
+<p>Nous allons étudier le comportement d'un amplificateur de classe AB transistors bipolaires autour d'un point de fonctionnement. Pour ce faire, nous travaillerons avec les &eacute;l&eacute;ments suivants :<br>
+- Une source de tension sinusoidale \(V_{in}\) de fr&eacute;quence 1 kHz,<br>
+- Une alimentation en tension continue \(V_{cc}\) et \(V_{ss}\) allant de +10 et -10V,<br>
+- Deux diodes semblables l'une &agrave; l'autre,<br>
+- Deux r&eacute;sistances \(R_1\) et \(R_2\) de valeur 25 puis 100 ohm,<br>
+- Une r&eacute;sistance \(R_L\) de charge de 8 puis 16 ohm.
+</p>
+<center>
+<figure>
+	<img src="./VM_files/ampliab.png" name="NPN" width="361" height="293">
+	<figcaption>Amplificateur classe AB a transistors bipolaires</figcaption>
+</figure>
+</center>
+	Commencons par se rappeler bri&egrave;vement le <a href="ici">fonctionnement du transistor NPN : </a>
+<h2>Fonctionnement du montage</h2>
+<h3>Principe</h3>
+On peut expliquer le fonctionnement de cet amplificateur bri&egrave;vement comme suit :<br>
+La source \(V_{in{\) envoie une tension sinuso&iuml;dale entre les deux diodes. Cette tension, tant&ocirc;t positive, tant&ocirc;t negative, va polariser en actif puis en satur&eacute; respectivement les transistors NPN et PNP.<br>
+<h3>Alternance positive</h3>
+Le transistor PNP du bas est bloqu&eacute;. Nous obtenons le circuit suivant : <br>
+<div align="center">
+<table>
+		<tbody>
+		<tr>
+			<td><img src="./VM_files/ampliabup.png" name="NPN" width="363" height="291"></td>
+			<td width="300">
+\(f = 1kHz \\
+V_{in} = Asin (2 \pi f t) \\
+V_{cc} = +10V \\
+V_{ss} = -10V \\
+R_1 = 100 \Omega \\
+R_2 = 100 \Omega \\
+R_L = 8 \Omega
+\)
+</td>
+		</tr>
+        </tbody>
+</table>
+</div>
+<h4>Si la tension d'entr&eacute;e est nulle ou moyenne</h4>
+Exemple avec une tension d'entr&eacute;e de 3V :<br>
+La tension au dessus la diode sup&eacute;rieure, passante, est 3.7V. La tension sur R1 est donc 6.3V, ce qui rend la jonction BC bloqu&eacute;e avec 6.3V &agrave ses bornes. <br>
+On peut exprimer le bilan de tension :<br>
+\(V_{cc} = V_{CB} + V_{BE} + V_{R_L} \\
+10V = 6.3V + 0.7V + V_{R_L} \\
+V_{R_L} = 3V\)<br><br>
+Le courant dans la r&eacute;sistance de charge peut &ecirc;tre calcul&eacute; par une simple loi d'Ohm, on obtient : <br><br>
+\(I_{R_L} = 3V / 8\Omega = 375mA\)<br>
+<br>
+C'est un montage suiveur de tension et amplificateur de courant.<br><br>
+<em>Remarque : </em>nous avons obtenu 359,7mA lors des simulations.<br>
+
+<h4>Si la tension d'entr&eacute;e est grande</h4>
+Exemple avec une tension d'entr&eacute;e de 10V :<br>
+La diode sup&eacute;rieure est bloqu&eacute;e. On peut directement exprimer la relation suivante :
+<br>
+<br>
+\(V_{cc} = V_{R1} + V_{BE} + V_{R_L} \\
+10V = I_B*100\Omega + 0.7V + I_E*8\Omega \) <br><br>
+Or, on connait la relation liant les courants du transistor :<br><br>
+\(I_C = h_{FE}*I_B \\
+I_E = I_B + I_C = (h_{FE}+1)I_B\)<br><br>
+On peut donc r&eacute;&eacute;crire :<br><br>
+\(10V = I_B*100\Omega + 0.7V + (100+1)*I_B*8\Omega \\
+I_B(100 \Omega + 101*8\Omega) = 9.3V  \\
+I_B = \frac{9.3V}{908\Omega} = 10.2mA \)<br><br>
+Du coup, on obtient le courant et la tension dans la charge :<br><br>
+\(I_E = 101*I_B = 1.0302A \\
+V_{R_L} = I_E*R_L = 1.0302A*8\Omega = 8.246V.\)<br>
+<br>
+<em>Remarque : </em>nous avons obtenu 1.0967A lors des simulations. 
+Nous pouvons regarder en d&eacute;tail l'&eacute;quation utilis&eacute;e :<br>&eacute;
+\(10V = I_B*100\Omega + V_{BE} + (h_{FE}+1)*I_B*8\Omega \).
+Ici interviennent en fait deux param&egrave;tres du transistor : \(h_{FE}\) et \(V_{CE}\).<br><br>
+1. \(h_{FE}\)<br>
+On trouve comme valeurs dans la simulation : \(I_{R_L} = 1.10A, I_{Q1B} = 10.9mA\)<br>
+Donc,<br><br>
+\(h_{FE} = \frac{I_{R_L}}{I_B} - 1 = 99.9174 \approx 100\)<br><br>
+Le probl&egrave; ne vient pas du gain du transistor.<br><br>
+2. \(V_{BE}\)<br>
+On trouve comme valeurs : \(V_{BQ1} = 9.73V, V_{out} = 8.77V\) donc \(V_{CE} = 0.96V\)<br>
+C'est le param&egrave;tre \(V_{CE}\) qui a &eacute;t&eacute; erron&eacute; : pour un tel courant de base, on pr&eacute;voit en pratique des transistors plus larges, de sorte &agrave; garder un \(V_{CE}\) correct.<br><br>
+On peut alors recalculer nos courants avec cette valeur :<br><hr>
+<br><br>
+On a donc une sorte de suiveur en tension (avec pertes au niveau du transistor) et un amplificateur de courant.
+<h3>Alternance n&eacute;gative</h3>
+Le transistor NPN du haut est bloqu&eacute;. Nous obtenons le sch&eacute;ma suivant :<br>
+<br><table>
+  <tbody>
+		<tr>
+			<td><img src="./VM_files/ampliabdown.png" name="NPN" width="400" height="315"></td>
+			<td width="300">
+<span>
+\(f = 1kHz \\
+V_{in} = Asin (2 \pi f t) \\
+V_{cc} = +10V \\
+V_{ss} = -10V \\
+R_1 = 100 \Omega \\
+R_2 = 100 \Omega \\
+R_L = 8 \Omega
+\)
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Le principe de fonctionnement est similaire &agrave; celui vu plus haut.</p>
+</td></tr>
+
+		<tr>
+			<td>
+				<img src="./VM_files/ligne.png" border="0" align="center" width="980"> 
+			</td>
+		</tr>
+<tr valign="TOP">
+			<td id="vm" rowspan="1" height="390px" width="980px">
+				<div id="ZoneBigIm" style="width:580px; height:390px;">
+          <div id="wrapper0" class="wrapper"> <!-- old   <div id="bubble1" class="bubble">   -->
+            <canvas id="canvas3" class="bubbleborder" style="z-index:25;" width="618" height="437">
+            </canvas>
+            <div class="bubbletext0" id="divbubble3" style="z-index: 25; font-size: 8pt; display: block;"></div>
+            <!-- <div class="bubble"> -->
+            <canvas id="canvas1" class="bubbleborder" style="z-index:25;" width="580" height="390">
+            </canvas>
+            <canvas id="canvas1a" class="bubbleborder" style="z-index:24;" width="580" height="390">
+            </canvas>
+            <div class="bubbletext0" id="divbubble1a" style="z-index: 24; font-size: 8pt; display: block;"></div>
+            <canvas id="canvas1b" class="bubbleborder" style="z-index:23;" width="580" height="390">
+            </canvas>
+            <div class="bubbletext0" id="divbubble1b" style="z-index: 23; font-size: 8pt; display: block;"></div>
+            <canvas id="canvas1c" class="bubbleborder" style="z-index:22;" width="580" height="390">
+            </canvas>
+            <div class="bubbletext0" id="divbubble1c" style="z-index: 22; font-size: 8pt; display: block;"></div>
+            <canvas id="canvas1d" class="bubbleborder" style="z-index:21;" width="580" height="390">
+            </canvas>
+            <div class="bubbletext0" id="divbubble1d" style="z-index: 21; font-size: 8pt; display: block;"></div>
+            <img class="imgvm" id="img0" src="circuit/oscillator/relax/Relax__Af_100_0000.jpg">
+<div class="area1 rect rect_p rect_previous" style="left:0.35%; top:0.8238%; width:4.65%; height:56.7778%;" onclick="Stop(0); decImId(0, 0); dispIm(0);"></div>
+<div class="area1 rect rect_n rect_next" style="left:20%; top:0.8238%; width:9.579%; height:56.7778%;" onclick="Stop(0); incImId(0, 0); dispIm(0);"></div>
+<div class="area1 rect rect_s rect_std" style="left:5%; top:0.8238%; width:15%; height:56.7778%;" onclick="selectIm2(0, Vm[0]['nPtCurves'], event, this);"></div>
+ <video id="vid0" class="videomain" loop><source src="VM_files/AmpliAB_1.00 kHz__Af_100_.webm" type="video/webm">
+</video>  <video id="vid0b" class="videob"><source src="VM_files/AmpliAB_1.00 kHz__Af_100_.webm" type="video/webm">
+</video> 
+			<script type="text/javascript">
+			var vid0 = document.getElementById("vid0");
+			vid0.oncanplay = function() {
+				if (DispToDo[0] == 1){ dispIm(0);
+				}
+    
+				else if (DispToDo[0] == 2){ selectIm(0, 0000);
+				}
+    
+			}
+			</script>          </div>
+				</div>
+				<!--X140629 <div id="div2" style="float:left; width:90px height:390px"> -->
+				<div id="ZoneConsole" class="wrapper">
+					<div id="div2a" style="float:left; width:30px; height:390px;position:relative;z-index:100;">
+	  <div style="text-align: center;"><button id="Xch" name="Xch" style="width:30px; height:30px;padding: 0;" title="Permuter les figures" onclick="switchDiv2()">&lt;--&gt;</button>
+<br></div>
+<p style="text-align: center;"><br><button id="Plus" name="Plus" style="width:30px; height:30px;padding: 0;" title="Plus vite" onclick="Faster(0)">+ +</button>
+<br><button id="Moins" name="Moins" style="width:30px; height:30px;padding: 0;" title="Moins vite" onclick="Slower(0)">- -</button>
+<br><button id="PlayPause" name="PlayPause" style="width:30px; height:30px;padding: 0;" title="Play/Pause" onclick="StartStop(0)">Run</button>
+<br></p><p style="text-align: center;"><br><button id="buttBubb1" name="buttBubb1" style="width:30px; height:30px;padding: 0;" title="Afficher/Masquer les bulles" onclick="toggleBubbles();"><img style="width:24px; height:24px;" alt="" src="icon/Bubble.png"></button>
+<br><button id="next" name="next" style="width:30px; height:30px;padding: 0;" title="Bulles suivantes" onclick="drawBubble4('next', draw);"><img style="width:24px; height:24px;" alt="" src="icon/Bubble_next.png"></button>
+<br><button id="previous" name="previous" style="width:30px; height:30px;padding: 0;" title="Bulles précédentes" onclick="drawBubble4('previous', draw);"><img style="width:24px; height:24px;" alt="" src="icon/Bubble_previous.png"></button>
+<br></p></div>				</div>
+        <div id="ZonesLittleImAndQueryResp">
+          <div id="ZoneLittleIm" style="height:235px;">
+            <div id="wrapper1" class="wrapper"> <!-- old   <div class="bubble">   -->
+              <canvas id="canvas2" class="bubbleborder" style="z-index:25;" width="350" height="235">
+              </canvas>
+              <div class="bubbletext1" id="divbubble2" style="z-index: 25; font-size: 4.5pt; display: block;"></div>
+              <canvas id="canvas2a" class="bubbleborder" style="z-index:24;" width="350" height="235">
+              </canvas>
+              <div class="bubbletext1" id="divbubble2a" style="z-index: 24; font-size: 4.5pt; display: block;"></div>
+              <canvas id="canvas2b" class="bubbleborder" style="z-index:23;" width="350" height="235">
+              </canvas>
+              <div class="bubbletext1" id="divbubble2b" style="z-index: 23; font-size: 4.5pt; display: block;"></div>
+              <canvas id="canvas2c" class="bubbleborder" style="z-index:22;" width="350" height="235">
+              </canvas>
+              <div class="bubbletext1" id="divbubble2c" style="z-index: 22; font-size: 4.5pt; display: block;"></div>
+              <canvas id="canvas2d" class="bubbleborder" style="z-index:21;" width="350" height="235">
+              </canvas>
+              <div class="bubbletext1" id="divbubble2d" style="z-index: 21; font-size: 4.5pt; display: block;"></div>
+              <!-- <div id="div3" style="float:left;height:390px;width:327px;">
+                <div id="div3a"	width="540px" height="406px"> -->
+              <img class="imgvm" id="img1" src="">
+ <video id="vid1" class="videomain" loop>
+</video>  <video id="vid1b" class="videob">
+</video> 
+			<script type="text/javascript">
+			var vid1 = document.getElementById("vid1");
+			vid1.oncanplay = function() {
+				if (DispToDo[1] == 1){ dispIm(1);
+				}
+    
+			}
+			</script>            </div>
+					</div>
+          <script> bubbleTextSize();  </script>
+          <div id="ZoneQueryResp" class="wrapper">
+            
+            <div id="text1" style="overflow-Y:scroll;  padding: 0mm 0.97mm 0.97mm;width:337px;height:140px;"><p></p>
+            </div>           </div>
+				</div>			
+			</td>
+		</tr>
+        
+		<tr>
+			<td>
+				<img src="./VM_files/ligne.png" border="0" align="center" width="980"> 
+			</td>
+		</tr>
+        <tr>
+        <td>
+
+<h2>Gain du montage</h2>
+<p>Nous consid&eacute;rerons le gain en tension et le gain en courant du montage. Ces valeurs sont donn&eacute;es par les &eacute;quations suivantes :<br>
+  <br>
+  \(A_{IF} = \frac{I_{out}}{I_{in}} = \frac{I_E}{I_{in}} \\
+  A_{VF} = \frac{V_{out}}{V_{in}} = \frac{I_E*R_L}{V_{in}}\)</p><h3>Gain en courant</h3><br>
+  Dans un premier temps, nous balayons avec un sinus de 10V en entr&eacute;e pour observer l'allure des courbes de courants et donc le gain :
+  <br>
+  \(V_{in} = 10sin(2\pi f t)V, R_1 = 25 \Omega, R_L = 8 \Omega\) <br>
+  <br>
+  <img src="VM_files/courantsat.jpg" width="941" height="120">
+  <br>
+  On peut noter que nous arrivons vite &agrave; saturation : le gain n'est donc pas constant et ne vaut pas la peine d'etre &eacute;tudi&eacute;.<br>
+</p>
+<p><em>Remarque : </em>lors des essais, nous voyons que la saturation arrive plus tard si l'on utilise la charge de 16 \(\Omega\). Ceci s'explique de la mani&egrave;re suivante :<br>
+  <br>
+\(V_{cc} = I_ER_L + V_{CE} + V_{R1} \\ 10V = 101*I_B*R_L + 0.7V + (V_{cc} - V_{in} - 0.7V) \\ 5V = 101I_B*R_L\) <br>
+<br>
+Donc si la charge augmente, le courant de base diminue : on arrive moins vite en saturation. </p>
+<p><br>
+  Nous alons alors nous int&eacute;resser a des tensions d'entr&eacute;e plus faibles, en prenant un sinus d'amplitude de 5V. <br>
+  La courbe renvoy&eacute;e est la suivante :<br>
+  \(V_{in} = 5sin(2\pi f t)V, R_1 = 100 \Omega, R_L = 8 \Omega\) 
+  <br>
+  <img src="VM_files/gain.jpg" width="942" height="134"><br>
+  Le gain en courant est donc de l'ordre de 5.69.</p>
+<p>Nous avons aussi test&eacute; avec \(R1 = 25\Omega\) et \(R_L = 8 \Omega\) :<br>
+</p>
+<p>  <img src="VM_files/courantnonsat.jpg" width="940" height="122">  <br>
+  <em>Remarque : </em>l'offset sur le courant d'entr&eacute;e s'explique simplement par la pr&eacute;sence du circuit de polarisation des transistors.<br>
+  Le gain trouve approche &agrave; 2 : un gain faible pour un amplificateur.</p>
+<p>
+<h3>Gain en tension</h3>
+Le gain en tension est unitaire ou moindre quand la tension d'entr&eacute;e devient grande (voir paragraphe sur le fonctionnement du montage).
+</p>
+<h2>Imp&eacute;dances d'entr&eacute;e et de sortie</h2>
+<p>Pour connaitre les imp&eacute;dances d'entr&eacute;e et de sortie du montage, il faut diviser la tension variationnelle &agrave; ses bornes par le courant variationnel. On obtient les equations suivantes :<br>
+  <br>
+  \(Z_{out} = \frac{\Delta V_{out}}{\Delta I_{out}} \\
+  Z_{in} = \frac{\Delta V_{n}}{\Delta I_{in}}\)
+  </p>
+  <br>
+  <br>
+  Une autre maniere de calculer ceci est de passer a l'equivalent en petits signaux de l'amplificateur :</p>
+<p><img src="VM_files/zeq.jpg" width="414" height="365"></p>
+<h2>Bilan des puissances</h2>
+<p>Nous utilisons une entr&eacute;e sinusoidale. Il est donc n&eacute;cessaire d'int&eacute;grer sur une p&eacute;riode puis de diviser par cette p&eacute;riode la valeur de la puissance pour obtenir la moyenne :<br>
+\(P_{utile} = V_{R_L}*I_{R_L} \\
+P_{totale} = 2*P_{} \)
+  <br>
+  <br>
+  <em>Remarque :</em> certains courants (e.g. les courants de collecteurs) sont des demi-sinus rectifi&eacute;s ( car polarisation changeant pour chaque alternance du signal d'entr&eacute;e):<br>
+  <center>
+  <figure>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Simple_half-wave_rectified_sine.svg/1600px-Simple_half-wave_rectified_sine.svg.png" width="199" height="146">
+</figure>
+<figcaption>http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Simple_half-wave_rectified_sine.svg/1600px-Simple_half-wave_rectified_sine.svg.png</figcaption>
+</center>
+  <p>La valeur efficace d'un courant de ce type est donn&eacute;e par :<br>
+    \(I = \frac{I_{max}}{2}\)
+</p>
+  <p>Nous prenons comme valeurs pour calculer la puissance : \(V_{in} = 5sin(2\pi f t)V, R_1 = 100 \Omega, R_L = 8 \Omega\)<br>
+    Le reste du circuit reste inchang&eacute; depuis le d&eacute;but.
+  </p>
+  <h2>Remarques et approximations</h2>
+<h3>Crossover</h3>
+Les deux diodes pr&eacute;sentes sur le montage fournissent une petite diff&eacute;rence de potentiel continue &agrave; la paire de transistors de sortie.
+Ceci permet de les polariser en actif en permanence pour que la distortion de crossover soit minimis&eacute;e.<br>
+<center>
+	<figure>
+		<img src="http://media.soundonsound.com/sos/jun06/images/liveclassd3_l.jpg">
+	</figure>
+    <figcaption>Source : http://media.soundonsound.com/sos/jun06/images/liveclassd3_l.jpg</figcaption>
+</center>
+<h3>Emballement thermique</h3>
+Dans ce montage, si un transistor chauffe, sa tension \(V_{BE}\) diminue.
+Si la somme \(V_{BE1} + V_{BE2}\) reste à peu près constante, le courant traversant les 2 transistors augmente.
+Ce courant plus important tend &agrave; augmenter \(V_{BE}\) mais donne aussi et surtout lieu à une dissipation de puissance plus importante, ce qui fait chauffer les transistors. On a un phénomène d’emballement thermique susceptible de détruire les transistors.<br>
+Pour rem&eacute;dier &agrave; ce probl&egrave;me, on ajoute des r&eacute;sistances de limitation de courant entre la paire de transistors compl&eacute;mentaires.
+<h3>Effet capactif des transistors</h3>
+La fr&La fr&eacute;quence utilis&eacute;e lors de nos simulations est de 1 kHz. Ceci est consid&eacute;r&eacute; comme une basse fr&eacute;quence : nous ne quantifierons&eacute;rerons donc pas l'effet capacitif des transistors et diodes.
+td>
+		</tr>
+	
+			<td>
+				<img src="./VM_files/ligne.png" border="0" align="center" width="&lt;?php echo($tableWidth); ?&gt;"> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" valign="TOP" width="980px">
+								</td>
+		</tr>
+	</tbody>
+</table>
+
+<script>
+  var ZoneBigIm = document.getElementById('ZoneBigIm');
+  var ZoneLittleIm = document.getElementById('ZoneLittleIm');
+  var wrapper0 = document.getElementById('wrapper0');
+  var wrapper1 = document.getElementById('wrapper1');
+	drawBubble4('next', draw);
+  dispIm(0);dispIm(1);</script>
+
+
+
+</body></html>

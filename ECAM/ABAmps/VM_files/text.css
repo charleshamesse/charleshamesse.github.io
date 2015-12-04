@@ -1,0 +1,194 @@
+/* 3 typical fonts largely used (let a choice to the browser which has not all fonts) :
+	- font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	- font-family: "Times New Roman", Times, serif; 
+	- font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono", monospace;
+*/
+body
+{
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	font-size:0.8em;
+	font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+	background-image:url(images/fond.png);
+}
+
+a
+{
+	color: #00F;
+	padding: 0em 0.3em;
+}
+
+a:hover
+{
+	/*X background: #CFDEFF; */
+	background: #f6c18f; /* light orange */
+	color: #3a3839; /* brown */
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+
+h1
+{
+	/*<font size="4"><u><b>*/
+	font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+}
+
+.c
+{
+	text-align: center;
+}
+
+.cal
+{
+	/*<font size="4"><u><b>*/
+	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono", monospace;
+}
+
+.resp
+{
+	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono", monospace;
+	color: #A0A0A0;
+	font-size: 0.8em;
+	font-style: italic;
+}
+.eq /* use with <span class="eq"></span> */
+{
+	color: #e03400;
+}
+.eq_em /* remark, use with <div class="eq_em" width="20em"> */
+{
+	display: inline-block;
+	font-size: large;
+	color: #e03400;
+	/*X background-color: #EFFFE4; */
+	background-color: #ffF8E0;
+	/*X border: 1px solid #6CFF9F; */
+	border: 1px solid #fa801e;  /* ECAM color */
+	padding: 0px 4em;
+	border-radius: 15px;
+}
+em
+{
+	/* color: #7f0a39; */
+	/*X color: #fa801e;  /* ECAM (old?) color */
+	/* color: #ec7404;  /* ECAM color */
+	color: #e03400;
+}
+.ico
+{
+	background: #F0F0F0;
+}
+.backlight
+{
+	/*background: #c0FFA0;*/
+	background-color: #ffF0D0;
+	/* background: #FBFF60; */
+}
+figure
+{
+	text-align: center;
+	display: inline-block;
+}
+figcaption
+{
+	text-align: center;
+	font-style: italic;
+}
+.left2
+{
+position:relative;
+left:-2em;
+}
+.right2
+{
+position:relative;
+left:2em;
+}
+.left
+{
+position:relative;
+left:-1em;
+}
+.right
+{
+position:relative;
+left:1em;
+}
+.rem /* remark, use with <div class="rem"> */
+{
+	font-size: smaller;
+	margin: 1em 4em 1em 2em;
+	/*margin-left: 2em;
+	margin-right: 4em;*/
+	/*X background-color: #EFFFE4; */
+	background-color: #ffF8E0;
+	/*X border: 1px solid #6CFF9F; */
+	border: 1px solid #fa801e;  /* ECAM color */
+	padding: 15px 2em;
+	/*arrondir les coins en haut à gauche et en bas à droite*/
+	border-radius: 20px;
+}
+table
+{
+	/*border-collapse: 1px;*/
+	border-spacing: 0px;
+	border: 0px solid #7f0a39;
+   margin-left:auto;
+   margin-right:auto;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+  /* box-shadow: 1px 1px 12px #7f0a39;*/
+	box-shadow: 1px 1px 12px #fa801e;
+}
+
+
+td /* td: standard cell, th: head cell */
+{
+	border: 1px solid #ffF0E0;  /* ECAM color */
+	/* border:0; */
+	/*padding: 2px 1em;*/
+	padding:10px;
+
+}
+td.c /* td: standard cell, th: head cell */
+{
+	text-align: center;
+	border:0;
+
+}
+th /* td: standard cell, th: head cell */
+{
+	/*border: solid #008000;
+	border-width: 3px 1px 2px 1px;*/
+	border: 1px solid #ffF0E0;  /* ECAM color */
+	/* border:0; */
+	/*padding: 2px 1em;*/
+	padding:0;
+
+}
+th.l /* td: standard cell, th: head cell */
+{
+	text-align: left;
+	border:0;
+
+}
+
+ul.near  /* used in home/home */
+{
+	padding: 0.1em 0em 0.1em 1em;
+	margin: 0px;
+}
+
+.author
+{
+	font-size: small;
+	float: right;
+}
+
+.msiecomment
+{
+	text-align: center;
+	font-size: 0.7em;
+  font-style: italic;
+}

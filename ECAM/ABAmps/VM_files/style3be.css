@@ -1,0 +1,85 @@
+body3be  {
+  background-color : #FFFFFF;
+  font-family : Tahoma,Arial,sans-serif;
+  font-size : 12px;
+  text-align : center;
+  color : #000000;
+}
+
+.cadre3be {
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 20px;
+  margin-bottom : 20px;
+  width : 1200px;
+  background-color : #E1E8FF;
+  border : 1px dashed #00008B;
+}
+
+.cadreintro3be {
+  margin-left : auto;
+  margin-right : auto;
+  width : 600px;
+  font-size : 10px;
+  font-style : italic;
+}
+
+.cadrevisio3be {
+  margin-left : auto;
+  margin-right : auto;
+  width : 600px;
+  text-align : left;
+}
+
+.titre3be {
+  font-family : Tahoma,Arial,sans-serif;
+  margin-top : 20px;
+  font-size : 22px;
+  font-weight : bold;
+  color : #00008B;
+}
+
+.tableau3be {
+  width : 100%;
+}
+
+.cellnom3be {
+  font-size : 12px;
+  width : 50%;
+  text-align : right;
+  padding : 3px;
+  padding-right : 7px;
+}
+
+.cellvm3be {
+  font-size : 12px;
+  width : 50%;
+  text-align : left;
+  padding : 3px;
+  padding-left : 7px;
+}
+
+.install3be {
+  font-size : 12px;
+  text-align : center;
+  padding : 3px;
+}
+
+.intro3be {
+  font-size : 10px;
+  font-style : italic;
+}
+
+a {
+  text-decoration : none;
+  color : #555555;
+}
+
+a:hover3be {
+  text-decoration : underline;
+  color: #00008B;
+}
+
+.gris3be {
+  color: #AAAAAA;
+}
